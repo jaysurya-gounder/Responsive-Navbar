@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css" />
+    <link rel="stylesheet" href="./Responsive.css" />
+    <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <header>
+        <button class="btn" onclick="handlerChange()"><img id="img" src="./Images/toggle.svg" /></button>
+        <label class="logo">LOGO</label>
+        <ul id="list">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+</body>
+<script>
+    // toggle function 
+    function handlerChange() {
+        const toggle = document.getElementById('list').classList
+        toggle.toggle('shown')
+        if (toggle.value === 'shown') {
+            return document.getElementById('img').src = './Images/close.svg'
+        } else {
+            return document.getElementById('img').src = './Images/toggle.svg'
+        }
+    }
+</script>
+
+</html>
